@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Food Menu</title>
+<style>
+body {font-family: Arial; background: #111; color: white; text-align:center;}
+button {background: orange; border: none; padding: 10px;}
+.item {padding: 15px; border-bottom: 1px solid #333;}
+</style>
+</head>
+
+<body>
+
+<h1>🍽️ My Restaurant</h1>
+
+<div class="item">
+Chicken Biryani ₹250 <br><br>
+<button onclick="order('Chicken Biryani ₹250')">Order</button>
+</div>
+
+<div class="item">
+Paneer Masala ₹200 <br><br>
+<button onclick="order('Paneer Masala ₹200')">Order</button>
+</div>
+
+<script>
+function order(item){
+let phone = "917715890147"; // इथे नंबर टाक
+let msg = "I want to order: " + item;
+let url = "https://wa.me/" + phone + "?text=" + encodeURIComponent(msg);
+window.open(url);
+}
+</script>
+
+</body>
+</html>
